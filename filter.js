@@ -7,21 +7,17 @@ const filteredNames = filter(myNames, function(name) {
     return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+// => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 // TASK: DEFINE YOUR FILTER FUNCTION BELOW:
-// function filter(arr, fn) {
-// 	let newArray = [];
-// 	for (i in arr){
-// 		if(fn(arr[i]) === true){
-// 			newArray.push(arr[i]);
-// 		}
-// 	}
-// 	return newArray;
-// }
+
 
 //BONUS MATERIAL:
 function filter(arr, fn) {
-	arr.forEach(e => fn(e) ? console.log(e) : 0);
+	let array = [];
+	arr.forEach(e => fn(e) ? array.push(e) : 0);
+	return array;
 }
+
+console.log(filteredNames); 
