@@ -18,7 +18,24 @@ const result = function(movement){
 }
 
 
-console.log(result(movement));
+//console.log(result(movement));
+
+const totalSteps = function(movement){
+	let answer = [];
+	function addElements(arr){
+		let total = 0;
+		for(i of arr){
+			total += i;
+		}
+		return total;
+	}
+	movement.forEach(move => 
+		answer.push(addElements(move))
+	);
+	return answer;
+}
+
+console.log(totalSteps(movement));
 
 
 // let filter = movement.filter(function(move){
