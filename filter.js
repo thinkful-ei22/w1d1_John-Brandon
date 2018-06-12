@@ -11,12 +11,17 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 // TASK: DEFINE YOUR FILTER FUNCTION BELOW:
+// function filter(arr, fn) {
+// 	let newArray = [];
+// 	for (i in arr){
+// 		if(fn(arr[i]) === true){
+// 			newArray.push(arr[i]);
+// 		}
+// 	}
+// 	return newArray;
+// }
+
+//BONUS MATERIAL:
 function filter(arr, fn) {
-	let newArray = [];
-	for (i in arr){
-		if(fn(arr[i]) === true){
-			newArray.push(arr[i]);
-		}
-	}
-	return newArray;
+	arr.forEach(e => fn(e) ? console.log(e) : 0);
 }
